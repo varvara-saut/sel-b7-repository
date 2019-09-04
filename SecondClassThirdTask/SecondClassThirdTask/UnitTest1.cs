@@ -2,6 +2,8 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
 
@@ -10,14 +12,16 @@ namespace SecondClassThirdTask
     [TestFixture]
     public class ThirdTaskTest
     {
-        private ChromeDriver driver;
+        private IWebDriver driver;
         private WebDriverWait wait;
 
         [SetUp]
         public void Start()
         {
-            driver = new ChromeDriver();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+            //driver = new ChromeDriver();
+          //  driver = new FirefoxDriver();
+            driver = new EdgeDriver();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(220);
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
         }
 
