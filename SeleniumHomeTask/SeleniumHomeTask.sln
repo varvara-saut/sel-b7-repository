@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumHomeTask", "SeleniumHomeTask\SeleniumHomeTask.csproj", "{3ADD7AAF-C98E-43D4-8EBA-8C0561FF2089}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3ADD7AAF-C98E-43D4-8EBA-8C0561FF2089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADD7AAF-C98E-43D4-8EBA-8C0561FF2089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADD7AAF-C98E-43D4-8EBA-8C0561FF2089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADD7AAF-C98E-43D4-8EBA-8C0561FF2089}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E77B65FB-47C6-4611-B55E-23CA055963DC}
+	EndGlobalSection
+EndGlobal
