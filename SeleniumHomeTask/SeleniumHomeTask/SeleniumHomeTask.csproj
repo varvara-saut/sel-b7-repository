@@ -63,6 +63,7 @@
     <Compile Include="TaskNine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskSeven.cs" />
+    <Compile Include="TaskTen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
