@@ -64,6 +64,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskSeven.cs" />
     <Compile Include="TaskTen.cs" />
+    <Compile Include="TaskEleven.cs" />
+    <Compile Include="TaskTwelve.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
