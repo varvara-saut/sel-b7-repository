@@ -5,6 +5,7 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using NUnit.Framework;
+using System.Globalization;
 
 namespace SeleniumHomeTask
 {
@@ -36,7 +37,7 @@ namespace SeleniumHomeTask
 
         public double FontSize(String size)
         {
-            return Convert.ToDouble(size.Remove(size.Length - 2));
+            return Convert.ToDouble(size.Remove(size.Length - 2), CultureInfo.InvariantCulture);  //унификация обработки разделителя
         }
 
 
@@ -58,12 +59,12 @@ namespace SeleniumHomeTask
             //Выбор правильного товара
             var product = driver.FindElement(By.CssSelector("#box-campaigns .product"));
             //Получение информации о товаре с главной страницы
-            string nameMainPage = product.FindElement(By.CssSelector(".name")).GetAttribute("textContent");
+            string nameMainPage = product.FindElement(By.CssSelector(".name")).Text;
 
             //Переход на страницу товара
             product.FindElement(By.CssSelector(".link")).Click();
             //Получение информации о товаре со страницы товара
-            string nameProdPage = driver.FindElement(By.CssSelector("#box-product .title")).GetAttribute("textContent");
+            string nameProdPage = driver.FindElement(By.CssSelector("#box-product .title")).Text;
 
             //Сравнение
             Assert.AreEqual(nameMainPage, nameProdPage, "Названия товаров не совпадают");
@@ -79,17 +80,17 @@ namespace SeleniumHomeTask
             var product = driver.FindElement(By.CssSelector("#box-campaigns .product"));
             //Получение информации о товаре с главной страницы
             var regPriceMainPage = product.FindElement(By.CssSelector(".regular-price"));
-            string regularPriceMainPage = regPriceMainPage.GetAttribute("textContent");
+            string regularPriceMainPage = regPriceMainPage.Text;
             var camPriceMainPage = product.FindElement(By.CssSelector(".campaign-price"));
-            string campaignPriceMainPage = camPriceMainPage.GetAttribute("textContent");
+            string campaignPriceMainPage = camPriceMainPage.Text;
 
             //Переход на страницу товара
             product.FindElement(By.CssSelector(".link")).Click();
             //Получение информации о товаре со страницы товара
             var regPriceProdPage = driver.FindElement(By.CssSelector(".regular-price"));
-            string regularPriceProdPage = regPriceProdPage.GetAttribute("textContent");
+            string regularPriceProdPage = regPriceProdPage.Text;
             var camPriceProdPage = driver.FindElement(By.CssSelector(".campaign-price"));
-            string campaignPriceProdPage = camPriceProdPage.GetAttribute("textContent");
+            string campaignPriceProdPage = camPriceProdPage.Text;
 
             //Сравнение
             Assert.AreEqual(regularPriceMainPage, regularPriceProdPage, "Обычные товаров не совпадают");
