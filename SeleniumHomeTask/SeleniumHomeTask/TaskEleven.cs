@@ -17,10 +17,10 @@ namespace SeleniumHomeTask
         [SetUp]
         public void Start()
         {
-            driver = new ChromeDriver();
+            //driver = new ChromeDriver();
             //driver = new FirefoxDriver();
-            //driver = new EdgeDriver();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            driver = new EdgeDriver();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace SeleniumHomeTask
             account.FindElement(By.CssSelector("[name='city']")).SendKeys("Carson City");
 
             //Выбор из выпадающих списков
-            account.FindElement(By.CssSelector(".select2-selection")).Click();
+            driver.FindElement(By.CssSelector(".select2-selection")).Click();
             driver.FindElement(By.CssSelector(".select2-search__field")).SendKeys("United States"+Keys.Enter);
             var selZone = new SelectElement(account.FindElement(By.CssSelector("select[name='zone_code']")));
             selZone.SelectByText("Nevada");
