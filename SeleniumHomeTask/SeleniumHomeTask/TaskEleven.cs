@@ -30,8 +30,8 @@ namespace SeleniumHomeTask
             capability.SetCapability("browser_version", "68.0");
             capability.SetCapability("browserstack.local", "false");
             capability.SetCapability("browserstack.selenium_version", "3.10.0");
-            capability.SetCapability("browserstack.user", "varvarasautkina1");
-            capability.SetCapability("browserstack.key", "EGCahdnkktQYXj5ykxgQ");
+            capability.SetCapability("browserstack.user", "");
+            capability.SetCapability("browserstack.key", "");
 
             driver = new RemoteWebDriver(new Uri("http://hub-cloud.browserstack.com/wd/hub/"), capability);*/
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
