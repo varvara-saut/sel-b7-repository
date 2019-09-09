@@ -18,8 +18,8 @@ namespace SeleniumHomeTask
         {
             // старая схема:
             FirefoxOptions options = new FirefoxOptions();
-        //    options.UseLegacyImplementation = false;
-            //options.BrowserExecutableLocation = @"‪C:\Program Files\Mozilla Firefox\firefox.exe";
+            options.UseLegacyImplementation = false;
+            options.BrowserExecutableLocation = @"C:\Program Files\Firefox Nightly\firefox.exe";
             driver = new FirefoxDriver(options);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
         }
