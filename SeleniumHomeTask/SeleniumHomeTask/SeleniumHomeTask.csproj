@@ -69,6 +69,7 @@
     <Compile Include="TaskNine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskSeven.cs" />
+    <Compile Include="TaskSeventeen.cs" />
     <Compile Include="TaskTen.cs" />
     <Compile Include="TaskEleven.cs" />
     <Compile Include="TaskTwelve.cs" />
